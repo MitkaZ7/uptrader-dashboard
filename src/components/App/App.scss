@@ -1,0 +1,14 @@
+.app {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "body";
+  margin: 20px;
+  color: $font-color;
+}
