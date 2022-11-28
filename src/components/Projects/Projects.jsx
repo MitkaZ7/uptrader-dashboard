@@ -9,25 +9,25 @@ const Projects = () => {
           tasks.map((task) => <TaskItem key={task._id} {...task} />)
         } */}
         <li className="project">
-          <h3 className="project__title">Project ONE</h3>
+          <a href='#' className="project__link">Project ONE</a>
         </li>
         <li className="project">
-          <h3 className="project__title">Project TWO</h3>
+          <a href='#' className="project__link">Project TWO</a>
         </li>
         <li className="project">
-          <h3 className="project__title">Project THREE</h3>
+          <a href='#' className="project__link">Project three</a>
         </li>
         <li className="project">
-          <h3 className="project__title">Project FOUR</h3>
+          <a href='#' className="project__link">Project four</a>
         </li>
         <li className="project">
-          <h3 className="project__title">Project FIVE</h3>
+          <a href='#' className="project__link">Project five</a>
         </li>
         <li className="project">
-          <h3 className="project__title">Project SIX</h3>
+          <a href='#' className="project__link">Project six</a>
         </li>
         <li className="project">
-          <h3 className="project__title">Project SEVEN</h3>
+          <a href='#' className="project__link">Project seven</a>
         </li>
 
       </ul>

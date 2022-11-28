@@ -4,6 +4,17 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  color: $accent-clr;
-  max-height: 150px;
+  min-height: 50px;
+  height: 100%;
+  text-align: center;
+
+  &__link {
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+    &__link:visited {
+    color: $accent-clr;
+
+    }
 }

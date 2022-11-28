@@ -3,7 +3,7 @@ import React from 'react'
 const Project = () => {
   return (
     <li className="project">
-      <h3 className="project__title">Project title</h3>
+      <a href='#' className="project__link">Project ONE</a>
     </li>
   )
 }
