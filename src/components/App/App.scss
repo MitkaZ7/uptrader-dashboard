@@ -1,14 +1,21 @@
 .app {
-  font-family: Helvetica, arial, sans-serif;
+
+  font-family: 'IBM Plex Mono', 'Helvetica', 'Arial', sans-serif;
+  font-weight:500;
   font-size: 14px;
   display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 1fr;
-    gap: 0px 0px;
+    grid-template-rows: 50px auto 30px;
+    gap: 10px 0px;
     grid-template-areas:
       "header"
-      "body";
-  margin: 20px;
-  color: $font-color;
+      "content"
+      "footer";
+  background-color: $bg-clr;
+  color: $font-important-clr;
+  width: 100vw;
+  height: 100vh;
+
+
 }

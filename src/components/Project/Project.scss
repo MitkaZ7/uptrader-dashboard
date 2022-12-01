@@ -1,20 +1,56 @@
 .project {
-  border: 1px solid $accent-clr;
-  border-radius: 5px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 50px;
-  height: 100%;
-  text-align: center;
+    display: grid;
 
-  &__link {
-    width: 100%;
-    text-decoration: none;
-    text-transform: uppercase;
+
+
+
+  &__content {
+
+      grid-template-columns: repeat(auto-fill, minmax(min-content, 400px));
+      justify-content: center;
+
+      display: grid;
+      // grid-auto-columns: 1fr;
+
+      // grid-template-rows: auto;
+      gap: 10px;
+      // grid-template-areas:
+      //   "title title title"
+      //   "queue dev done"
+      //   "tasks tasks tasks";
   }
-    &__link:visited {
-    color: $accent-clr;
 
-    }
+  &__task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__title {
+    width: 100%;
+    // margin: 0 0 0 20px;
+    text-align: center
+
+  }
+  &__tasks-section {
+    border: 2px solid $border-clr;
+    border-radius: 5px;
+
+  }
+  &__tasks-section-header {
+
+    margin: 0;
+    padding: 5px;
+    border-bottom: 2px solid ;
+    text-align: center;
+    font-weight: 700;
+  }
+  &__queue-tasks {
+    @include task-section-colors($queue-clr, $queue-clr);
+  }
+  &__dev-tasks {
+    @include task-section-colors($font-minor-clr, $font-minor-clr);
+  }
+  &__done-tasks {
+    @include task-section-colors($accent-clr, $accent-clr);
+  }
 }

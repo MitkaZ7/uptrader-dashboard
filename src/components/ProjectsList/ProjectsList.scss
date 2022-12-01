@@ -1,0 +1,44 @@
+.projects-list {
+  margin-top: 10px;
+
+  &__title {
+    text-align: center;
+    margin: 20px 0 0 0;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 450px));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+  }
+  &__item {
+    border: 3px solid $border-clr;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 50px;
+    height: 50%;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+    &__link {
+      width: 100%;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 0 auto;
+    }
+
+    &__link:visited {
+      color: $accent-clr;
+    }
+
+    &:hover {
+      border-color: $accent-clr;
+      cursor: pointer;
+    }
+
+}

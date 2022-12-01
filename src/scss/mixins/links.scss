@@ -1,0 +1,7 @@
+@mixin link {
+  text-decoration: none;
+  :visited {
+    color: #fff;
+  }
+
+}

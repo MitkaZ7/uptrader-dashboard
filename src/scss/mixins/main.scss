@@ -1,0 +1,4 @@
+@mixin task-section-colors($border-color, $text-color) {
+  color: $text-color;
+  border-color: $border-color;
+}
