@@ -8,7 +8,7 @@
       flex-flow: column wrap;
       // margin-left: 10px;
       //
-      color: $font-important-clr;
+      color: $font-clr;
       text-decoration: none;
       display: grid;
       grid-template-columns: 1fr 90px;
@@ -16,7 +16,7 @@
       align-items: center;
   }
     &__link:visited {
-      color: $font-important-clr;
+      color: $font-clr;
     }
     &__link:hover {
 
@@ -29,7 +29,7 @@
       height: 100%;
       align-items: center;
       justify-content: center;
-      border-left: 1px solid $font-important-clr;
+      border-left: 1px solid $font-clr;
       border-radius: 5px;
       padding: 0 3px;
     }

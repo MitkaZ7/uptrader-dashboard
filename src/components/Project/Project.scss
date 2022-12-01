@@ -6,14 +6,14 @@
 
   &__content {
 
-      grid-template-columns: repeat(auto-fill, minmax(min-content, 400px));
-      justify-content: center;
+      // grid-template-columns: repeat(auto-fill, minmax(min-content, 400px));
+      // justify-content: center;
 
-      display: grid;
-      // grid-auto-columns: 1fr;
+      // display: grid;
+      // // grid-auto-columns: 1fr;
 
-      // grid-template-rows: auto;
-      gap: 10px;
+      // // grid-template-rows: auto;
+      // gap: 10px;
       // grid-template-areas:
       //   "title title title"
       //   "queue dev done"

@@ -1,0 +1,20 @@
+#root {
+  max-width: 1920px;
+  font-family: 'IBM Plex Mono', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+  min-height: calc(100vh - 72px);
+  font-size: 14px;
+      display: grid;
+      //   grid-auto-columns: 1fr;
+      //   grid-template-columns: 1fr;
+        // grid-template-rows: 50px auto 30px;
+      //   gap: 10px 0px;
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+    background-color: $bg-clr;
+    color: $font-clr;
+
+
+}

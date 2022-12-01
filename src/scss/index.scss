@@ -5,8 +5,8 @@
 // mixins
 @import './mixins/main';
 @import './mixins/links.scss';
+@import './root';
 
-@import '../components/App/App';
 @import '../components/Header/Header';
 @import '../components/Navbar/Navbar';
 @import '../components/Footer/Footer';
