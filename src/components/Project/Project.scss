@@ -1,39 +1,79 @@
 .project {
-    display: grid;
+  // padding: 0 20px;
+  // display: grid;
+  // grid-template-columns:repeat(auto-fill, minmax(min-content, 440px));
+  // gap: 10px;
+  // width: 100%;
+  // justify-content: center;
+  // display: grid;
+  // grid-template-rows: 50px auto;
+  // grid-template-columns: repeat(auto-fill, minmax(min-content, 400px));
+  // padding: 0 20px;
+  // gap: 10px;
+  display: flex;
 
-
-
+  flex-flow: column wrap;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__content {
 
-      // grid-template-columns: repeat(auto-fill, minmax(min-content, 400px));
-      // justify-content: center;
-
-      // display: grid;
-      // // grid-auto-columns: 1fr;
-
-      // // grid-template-rows: auto;
-      // gap: 10px;
-      // grid-template-areas:
-      //   "title title title"
-      //   "queue dev done"
-      //   "tasks tasks tasks";
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(min-content, 400px));
+      padding: 0 20px;
+      gap: 10px;
   }
+  &__button-add-task {
+    background-color: $bg-clr;
+    color: $succes-clr;
+    max-height: 30px;
+    max-width: 100px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid $succes-clr;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 10px;
+    transition: all .2s linear;
+    &:hover {
+        cursor: pointer;
+        background-color: $succes-clr;
+        border-color: $succes-clr;
+        color: $font-clr;
+
+      }
+    &:focus {
+
+    }
+    &:active {
+      color: green;
+    }
+  }
+
+
 
   &__task-list {
     list-style: none;
     padding: 0;
     margin: 0;
+
   }
   &__title {
-    width: 100%;
-    // margin: 0 0 0 20px;
-    text-align: center
+    font-size: 1.5em;
+    text-align: center;
+    max-height: 50px;
+    // grid-column: 1 / -1;
+    margin: 20px 0;
 
   }
   &__tasks-section {
     border: 2px solid $border-clr;
     border-radius: 5px;
+
 
   }
   &__tasks-section-header {
@@ -43,6 +83,8 @@
     border-bottom: 2px solid ;
     text-align: center;
     font-weight: 700;
+    text-transform: uppercase;
+
   }
   &__queue-tasks {
     @include task-section-colors($queue-clr, $queue-clr);

@@ -1,5 +1,5 @@
 import React from 'react'
-import TaskItem from '../TaskItem/TaskItem'
+import TaskItem from '../TaskItem/TaskItem.jsx'
 const TaskList = () => {
   return (
     <ul className='taskList'>

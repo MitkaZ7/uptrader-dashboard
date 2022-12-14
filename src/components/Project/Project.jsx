@@ -3,30 +3,32 @@ import TaskList from '../TaskList/TaskList'
 
 const Project = () => {
   return (
-    <article className="project">
-      <h3 className="project__title">Project: SPA "Uptrader dashboard"</h3>
-
-      <section className="project__content">
-        <section className="project__tasks-section project__queue-tasks">
-          <h3 className="project__tasks-section-header">queue</h3>
+    <article className='project'>
+      <div className='project__header'>
+        <h3 className='project__title'>Project: SPA 'Uptrader dashboard'</h3>
+        <button className='project__button-add-task'>add task</button>
+      </div>
+      <section className='project__content'>
+        <section className='project__tasks-section project__queue-tasks'>
+          <h3 className='project__tasks-section-header'>queue</h3>
           <TaskList/>
         </section>
-        <section className="project__tasks-section project__dev-tasks">
-          <h3 className="project__tasks-section-header">development</h3>
+        <section className='project__tasks-section project__dev-tasks'>
+          <h3 className='project__tasks-section-header'>development</h3>
           <TaskList />
         </section>
-        <section className=" project__tasks-section project__done-tasks">
-          <h3 className="project__tasks-section-header">done</h3>
+        <section className='project__tasks-section project__done-tasks'>
+          <h3 className='project__tasks-section-header'>done</h3>
           <TaskList />
         </section>
       {/* </div> */}
       </section>
     </article>
-    // <article className="project">
-    //   <h3 className="project__title">Project title: SPA "Uptrader dashboard"</h3>
-    //     <ul className="project__task-list">
+    // <article className='project'>
+    //   <h3 className='project__title'>Project title: SPA 'Uptrader dashboard'</h3>
+    //     <ul className='project__task-list'>
     //     {/* тут будет мап со списком задач по проекту элементами  */}
-    //       <li className="task">
+    //       <li className='task'>
     //         <ariticle className='task__content'>
     //           <h3 className='task__header'>Do the project</h3>
     //           <section className='task__metadata'>
@@ -55,7 +57,7 @@ const Project = () => {
     //           </section>
     //           <section className='task__files'>
 
-    //             <input type="file" id="file" name="file" multiple />
+    //             <input type='file' id='file' name='file' multiple />
     //           </section>
     //           <section className='task__comments comments'>
     //             <ul className='comments__list'>
@@ -64,7 +66,7 @@ const Project = () => {
     //           </section>
     //         </ariticle>
     //       </li>
-    //       <li className="task">
+    //       <li className='task'>
     //         <ariticle className='task__content'>
     //           <h3 className='task__header'>Believe in yourself</h3>
     //           <section className='task__metadata'>
@@ -94,7 +96,7 @@ const Project = () => {
     //           </section>
     //           <section className='task__files'>
 
-    //             <input type="file" id="file" name="file" multiple />
+    //             <input type='file' id='file' name='file' multiple />
     //           </section>
     //           <section className='task__comments comments'>
     //             <ul className='comments__list'>
@@ -103,7 +105,7 @@ const Project = () => {
     //           </section>
     //         </ariticle>
     //       </li>
-    //       <li className="task">
+    //       <li className='task'>
     //         <ariticle className='task__content'>
     //           <h3 className='task__header'>Get new job</h3>
     //           <section className='task__metadata'>
@@ -133,7 +135,7 @@ const Project = () => {
     //           </section>
     //           <section className='task__files'>
 
-    //             <input type="file" id="file" name="file" multiple />
+    //             <input type='file' id='file' name='file' multiple />
     //           </section>
     //           <section className='task__comments comments'>
     //             <ul className='comments__list'>
