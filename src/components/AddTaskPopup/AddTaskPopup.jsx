@@ -1,9 +1,9 @@
 import React from 'react'
 import Popup from '../Popup/Popup'
 import Form from '../Form/Form'
-const AddTaskPopup = () => {
+const AddTaskPopup = ({ isOpen, setOpen }) => {
   return (
-    <Popup>
+    <Popup isOpen={isOpen} setOpen={setOpen}>
         <Form/>
     </Popup>
   )

@@ -1,12 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import TaskList from '../TaskList/TaskList'
-
+import AddTaskPopup from '../AddTaskPopup/AddTaskPopup'
 const Project = () => {
+  const [isAddTaskPopupOpen, setIsAddTaskPopupOpen] = useState(false)
+  const openPopupHandler = () => {
+    setIsAddTaskPopupOpen(true);
+  }
+
   return (
+    <>
     <article className='project'>
       <div className='project__header'>
         <h3 className='project__title'>Project: SPA 'Uptrader dashboard'</h3>
-        <button className='project__button-add-task'>add task</button>
+        <button className='project__button-add-task' onClick={openPopupHandler}>add task</button>
       </div>
       <section className='project__content'>
         <section className='project__tasks-section project__queue-tasks'>
@@ -24,6 +30,8 @@ const Project = () => {
       {/* </div> */}
       </section>
     </article>
+      <AddTaskPopup isOpen={isAddTaskPopupOpen} setOpen={setIsAddTaskPopupOpen}/>
+    </>
     // <article className='project'>
     //   <h3 className='project__title'>Project title: SPA 'Uptrader dashboard'</h3>
     //     <ul className='project__task-list'>

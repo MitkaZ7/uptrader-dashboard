@@ -33,7 +33,7 @@ const Form = () => {
           <fieldset className='form__fieldset'>
               <input className="form__input" {...register("taskTitle")} />
               <select className='form__select' {...register("selectedProject")}>
-                  <option value=''>Select a project</option>
+                  <option value='noNameProject'>Select a project</option>
                   <option value="TODO React SPA">TODO React SPA</option>
                   <option value="Dashboard React SPA">Dashboard React SPA</option>
                   <option value="Vue weather App">Vue weather App</option>
