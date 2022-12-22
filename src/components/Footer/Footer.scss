@@ -1,8 +1,10 @@
 .footer {
+    color: $font-minor-clr;
     display: flex;
     align-items: center;
     justify-content: center;
   &__logo {
     height: 10px;
+    grid-area: footer;
   }
 }

@@ -1,11 +1,24 @@
 @import '../vendor/normalize';
+// @import '../vendor/fonts/fonts';
 @import './colors';
-// @import './pages/main.scss';
+
+// mixins
+@import './mixins/main';
+@import './mixins/links.scss';
+// 
+@import './root';
+@import '../components/Form/Form';
+@import '../components/Popup/Popup';
+@import '../components/AddTaskPopup/AddTaskPopup';
+@import '../components/TaskPopup/TaskPopup';
+
 @import '../components/App/App';
 @import '../components/Header/Header';
+@import '../components/Navbar/Navbar';
 @import '../components/Footer/Footer';
-@import '../components/Projects/Projects';
+@import '../components/ProjectsList/ProjectsList';
 @import '../components/Project/Project';
 @import '../components/TaskList/TaskList';
 @import '../components/TaskItem/TaskItem';
+
 

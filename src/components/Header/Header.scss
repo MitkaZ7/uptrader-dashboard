@@ -1,14 +1,18 @@
 .header {
+  padding: 0 20px;
   display: flex;
-  align-items: center;
-  justify-content:center;
 
+  border-bottom: 2px solid $accent-clr;
+  justify-content: space-between;
+  max-height: 50px;
   &__logo {
-    width: 40px;
+    width: 50px;
+
   }
   &__title {
-    margin-left: 10px;
+
     color: $accent-clr;
     text-transform: uppercase;
+
     }
 }
