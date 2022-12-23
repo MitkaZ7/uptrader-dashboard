@@ -2,7 +2,7 @@ import React,{ useEffect } from 'react'
 
 
 
-const Popup = ({ isOpen, setOpen, children }) => {
+const Popup = ({ isOpen, setOpen,  children }) => {
  
   function closePopup(evt) {
     setOpen(false);
