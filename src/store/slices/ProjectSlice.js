@@ -1,13 +1,16 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const projectsSlice = createSlice({
-    name: 'projects',
-    initialState: {
-        projects: []
-    },
+const initialState = {
+    projects: [],
+    tasks: [],
+};
+
+const projectSlice = createSlice({
+    name: 'project',
+    initialState,
     reducers: {
         addProject(state, action) {
-
+            state.projects.push(action.payload)
         },
         updateProject(state, action) {
 
@@ -17,4 +20,4 @@ const projectsSlice = createSlice({
         },
     }
 })
-export default projectsSlice.reducer;
+export default projectSlice.reducer;

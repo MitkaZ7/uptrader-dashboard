@@ -1,0 +1,27 @@
+@mixin button-add {
+    background-color: $bg-clr;
+        color: $succes-clr;
+        max-height: 30px;
+       
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid $succes-clr;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-left: 10px;
+        transition: all .2s linear;
+    
+        &:hover {
+            cursor: pointer;
+            background-color: $succes-clr;
+            border-color: $succes-clr;
+            color: $font-clr;
+    
+        }
+    
+        &:focus {}
+    
+        &:active {
+            color: green;
+        }
+}
