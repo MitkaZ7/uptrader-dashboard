@@ -1,37 +1,33 @@
 import { collection, doc, setDoc, getDoc, getDocs } from "firebase/firestore";
-import { db } from '../utils/firebase'
-class Api {
-   
+import { db } from './firebase'
 
-    getTasks() {
-     
-       const res =  getDocs(collection(db,'tasks'))
-            .then((querySnapshot) =>{
-                const tasksArray = querySnapshot.docs.map((doc) => ({...doc.data(), id: doc.id}));
-                console.log(tasksArray)
-                return tasksArray;
-            });
-            return res;
-    }
+export function getTasks() {
+    return db.collection('tasks')
+        .get()
+        .then(snapshot => {
+            const tasksArr = snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
 
-    addTask(taskData) {
-
-    }
-   
-
+            return tasksArr;
+        });
 }
-// export const getAllTasks = async () => {
 
-//     await getDocs(collection(db, "tasks"))
-//         .then((querySnapshot) => {
-//             const newData = querySnapshot.docs
-//                 .map((doc) => ({ ...doc.data(), id: doc.id }));
-//             return newData;
-//         })
-
-// }
-
-
-
-const api = new Api();
-export default api;
+export function createTask(data) {
+    return db.collection('tasks').add({
+        ...data,
+    })
+        .then(docRef => docRef.get())
+        .then(doc => ({
+            id: doc.id,
+            ...doc.data()
+        }));
+}
+export function updateTodo(todoId, data) {
+    return db.collection('tasks').doc(todoId).update(data)
+        .then(() => ({
+            id: todoId,
+            ...data
+        }));
+}

@@ -1,34 +1,27 @@
 import React, { useState } from 'react'
 import Upload from '../../assets/icons/upload.svg'
 import { useDispatch } from 'react-redux'
+import { addTask, getInitialTasks } from '../../store/slices/tasksSlice'
 import {useForm} from 'react-hook-form'
-// import Parse from 'parse/dist/parse.min.js';
+import Parse from 'parse/dist/parse.min.js';
 
-// // Your Parse initialization configuration goes here
-// const config = {
-//     app_id: process.env.REACT_APP_PARSE_APP_ID,
-//     host_url: process.env.REACT_APP_PARSE_HOST_URL,
-//     js_key: process.env.REACT_APP_PARSE_JS_KEY,
-// }
-// // const PARSE_APPLICATION_ID = 'jbXQTwt2jcCYNqzkAY2lQuJccGxa1Mgh4eAGNrsi';
-// // const PARSE_HOST_URL = 'https://parseapi.back4app.com/';
-// // const PARSE_JAVASCRIPT_KEY = 'VViIeoejFGyuJ3Ztz2gzcFkHVcthTH3JLVtv36cO';
-// Parse.initialize(config.app_id, config.js_key);
-// Parse.serverURL = config.host_url;
+
 
 
 const Form = () => {
+   
     const dispatch = useDispatch();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-   
+  
     const onSubmit = async data => {
-        // console.log(data)
+        console.log(data)
+
         // dispatch(createTask(data))
         // api.addTask(data)
-        // const person = new Parse.Object('task');
-        // person.set('title','first');
-        // await person.save();
-        // alert('saved');
+        const task = new Parse.Object('Task');
+        task.set('title','11gfffsssffffd sdf');
+        await task.save();
+        alert('saved');
         
     };
     
@@ -62,7 +55,7 @@ const Form = () => {
               <input className="form__input-file" id="file" name="file" type="file" multiple />
 
           </div>
-          <button type="submit" className="form__button-submit button">Add</button>
+          <button type="submit" className="form__button-submit button" >Add</button>
       </form>
   )
 }
