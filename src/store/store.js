@@ -8,7 +8,7 @@ export default configureStore ({
     reducer: {
         tasks: tasksSlice,
         popup: popupSlice,
-        // projects: projectSlice,
+        projects: projectSlice,
 
     }
        

@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import TaskList from '../TaskList/TaskList'
 import AddTaskPopup from '../AddTaskPopup/AddTaskPopup'
-import { useDispatch } from 'react-redux'
-import { getAllTasks } from '../../store/slices/tasksSlice'
-const Project = () => {
-  const dispatch = useDispatch();
-  const [isAddTaskPopupOpen, setIsAddTaskPopupOpen] = useState(false)
-  const openPopupHandler = () => {
-    setIsAddTaskPopupOpen(true);
-  }
+import { useDispatch, useSelector } from 'react-redux'
+import { openPopup } from '../../store/slices/popupSlice'
 
+const Project = () => {
+
+  const dispatch = useDispatch();
+
+  const openPopupHandler = () => {
+    dispatch(openPopup());
+  }
+ 
 
   return (
     <>
@@ -34,7 +36,7 @@ const Project = () => {
       {/* </div> */}
       </section>
     </article>
-      <AddTaskPopup isOpen={isAddTaskPopupOpen} setOpen={setIsAddTaskPopupOpen} onClose={setIsAddTaskPopupOpen}/>
+      <AddTaskPopup />
     </>
    
   )

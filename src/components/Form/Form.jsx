@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import Upload from '../../assets/icons/upload.svg'
 import { useDispatch } from 'react-redux'
-import { addTask, getInitialTasks } from '../../store/slices/tasksSlice'
-import {useForm} from 'react-hook-form'
+
+import { closePopup } from '../../store/slices/popupSlice'
+import { addTask, getTasks, createTask } from '../../store/slices/tasksSlice'
+import {useForm, reset} from 'react-hook-form'
 import Parse from 'parse/dist/parse.min.js';
+
 
 
 
@@ -11,21 +14,25 @@ import Parse from 'parse/dist/parse.min.js';
 const Form = () => {
    
     const dispatch = useDispatch();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState } = useForm();
   
     const onSubmit = async data => {
-        console.log(data)
+        dispatch(createTask({
+            title: data.title, 
+            isCompleted: false,
+            description: data.description,
+            priority: data.priority,
+        }))
+        // console.log(data)
 
-        // dispatch(createTask(data))
-        // api.addTask(data)
-        const task = new Parse.Object('Task');
-        task.set('title','11gfffsssffffd sdf');
-        await task.save();
-        alert('saved');
-        
+      
+        // const task = new Parse.Object('Task');
+        // task.set('title','11gfffsssffffd sdf');
+        // await task.save();
+  
+        dispatch(closePopup())
+       
     };
-    
-    
    
     
   return (
@@ -55,7 +62,7 @@ const Form = () => {
               <input className="form__input-file" id="file" name="file" type="file" multiple />
 
           </div>
-          <button type="submit" className="form__button-submit button" >Add</button>
+          <button type="submit" className="form__button-submit button">Add</button>
       </form>
   )
 }
